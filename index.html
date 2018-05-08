@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+			Hello World <br>
+			{{message}}  a message from {{from}} <br>
+			<input type="text" name="" v-model = "inputText">  <!-- Two way binding-->
+			<button @click="getMessage"> submit</button>
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	
+	let app = new Vue({
+		el : '#app' ,
+		data : {
+			//message : "Hello Learner!",
+			message : null,
+			inputText : null,
+			from : "Stark"
+		},
+
+		methods: {
+			getMessage()
+			{
+				this.message = this.inputText 
+				this.inputText  = null
+			}
+		}
+	})
+
+</script>
+</body>
+</html>
